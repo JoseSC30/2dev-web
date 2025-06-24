@@ -14,8 +14,8 @@ FROM node:18-alpine AS runner
 
 WORKDIR /app
 
-ENV NODE_ENV production
-ENV PORT 3010
+ENV NODE_ENV=production
+ENV PORT=3010
 
 COPY --from=builder /app/.next .next
 COPY --from=builder /app/public public
